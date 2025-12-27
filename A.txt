@@ -1,0 +1,73 @@
+*exp-1*
+mkdir foldername
+cd foldername
+gedit filename.txt
+git init
+git add filename.txt
+git commit -m "fimename.txt"
+
+*exp-2*
+git checkout -b feaature
+git add filename.txt
+git commit -m "filename.txt"
+git checkout master
+git merge feature
+
+*exp-3*
+git checkout feature
+gedit filename1.txt
+git stash save "message"
+git checkout master
+git stash apply
+git stash pop
+
+*exp-4*
+create repo
+git clone <repo link>
+
+*exp-5*
+git checkout master
+git fetch reponame
+git rebase reponame / master
+git rebase --continue
+git push reponame master
+
+*exp-6*
+git checkout master
+git add .
+git commit -m "message"
+git checkout feature
+gedit filename2.txt
+git add .
+git commit -m "message"
+git checkout feature
+git merge master -m "message"
+
+*exp-7*
+git tag v1.0
+git tag
+
+*exp-8*
+ git log --oneline
+ git cherry-pick <select no. from that list>
+notepad filemane.txt->(delete all and add one word)
+git add filename.txt
+git cherry-pick --continue
+esc->:wq->enter
+
+*exp-9*
+git log --oneline
+git show <select no. from that list>
+git log -n 1 <select no. from that list>
+
+*exp-10*
+git log --author="name" --since="yyy-mm-dd" --until="yyyy-mm-dd"
+
+*exp-11*
+git log -n 5
+
+*exp-12*
+git log --oneline
+git revert <select no. from that list>
+esc->:wq->enter
+git log --oneline
